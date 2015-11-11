@@ -14,5 +14,7 @@
         /// Gets or sets some dummy data in this entity.
         /// </summary>
         public string Data { get; set; }
+       public Parent Parent { get; set; }
+       public int ParentId { get; set; }
     }
 }

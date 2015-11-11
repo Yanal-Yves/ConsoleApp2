@@ -28,7 +28,8 @@
             var options = new DbContextOptionsBuilder();
             options.UseSqlServer(connectionString);
             var context = new MyDbContext(options.Options);
-
+      context.Database.EnsureDeleted();
+      context.Database.EnsureCreated();
             // Create a graph entity
             var parent = new Parent
             {
