@@ -31,9 +31,9 @@
         /// </summary>
         public DbSet<ChildA> ChildAs { get; set; }
 
-        /// <summary>
-        /// Gets or sets the child 2 s.
-        /// </summary>
-        public DbSet<ChildB> ChildBs { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

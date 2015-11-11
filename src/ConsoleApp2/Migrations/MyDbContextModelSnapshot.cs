@@ -26,18 +26,6 @@ namespace ConsoleApp2.Migrations
                     b.HasKey("ChildAId");
                 });
 
-            modelBuilder.Entity("ConsoleApp2.Model.ChildB", b =>
-                {
-                    b.Property<int>("ChildBId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Data");
-
-                    b.Property<int?>("ParentParentId");
-
-                    b.HasKey("ChildBId");
-                });
-
             modelBuilder.Entity("ConsoleApp2.Model.Parent", b =>
                 {
                     b.Property<int>("ParentId")
@@ -48,13 +36,6 @@ namespace ConsoleApp2.Migrations
                     b.Property<string>("Data");
 
                     b.HasKey("ParentId");
-                });
-
-            modelBuilder.Entity("ConsoleApp2.Model.ChildB", b =>
-                {
-                    b.HasOne("ConsoleApp2.Model.Parent")
-                        .WithMany()
-                        .ForeignKey("ParentParentId");
                 });
 
             modelBuilder.Entity("ConsoleApp2.Model.Parent", b =>

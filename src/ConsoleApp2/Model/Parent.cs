@@ -21,10 +21,5 @@
         /// Gets or sets a <see cref="ChildA"/> entity.
         /// </summary>
         public ChildA ChildA { get; set; }
-
-        /// <summary>
-        /// Gets or sets a <see cref="List{T}"/> of <see cref="ChildBs"/>.
-        /// </summary>
-        public List<ChildB> ChildBs { get; set; }
     }
 }

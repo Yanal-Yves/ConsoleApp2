@@ -33,7 +33,6 @@
             var parent = new Parent
             {
                 Data = "Yanal",
-                ChildBs = new List<ChildB> { new ChildB { Data = "1234" } },
                 ChildA = new ChildA { Data = "1234" }
             };
             
@@ -41,8 +40,8 @@
             context.Parents.Add(parent, GraphBehavior.IncludeDependents);
 
             // Save change to the storage
-            // Bug: ChildA is not going to be saved on the database on EF7 only ChildBs is going to be saved in the database.
-            // On EF6 both ChildA and ChildB gets stored in database when calling context.SaveChanges().
+            // Bug: ChildA is not going to be saved on the database on EF7.
+            // On EF6 both ChildA gets stored in database when calling context.SaveChanges().
             context.SaveChanges();
         }
     }
